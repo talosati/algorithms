@@ -8,6 +8,7 @@ let arr2 = [46, 80, 18, 26, 60, 66, 24, 21, 60, 18, 14, 34, 72, 69, 14, 8, 13, 2
     81, 8, 100, 28, 43, 60, 44, 8, 21, 11, 80, 3, 69, 4, 80, 28, 81, 11, 66];
 
 function countFrequency(numbers) {
+    console.log(numbers.length);
     let hits = {};
     numbers.forEach(currentValue => {
         if (!hits.hasOwnProperty(currentValue)) {
@@ -27,8 +28,8 @@ function orderByFrequency(unordered) {
 }
 
 function equalizeArray(arr) {
-    let highestDuplicates = orderByFrequency(countFrequency(arr))
-    return arr.filter(n => !highestDuplicates.includes(n)).length;
+    let highestDuplicate = parseInt(orderByFrequency(countFrequency(arr)));
+    return arr.filter(n => highestDuplicate !== n).length;
 }
 
 console.log(equalizeArray(array));
