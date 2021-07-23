@@ -23,3 +23,7 @@ function countTheWords(text) {
 }
 
 console.log(countTheWords(myString));
+
+let str = "Give.";
+let patt1 = /^[\w._-]+$/;
+console.log(patt1.test(str))
